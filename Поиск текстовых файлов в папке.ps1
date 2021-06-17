@@ -1,0 +1,1 @@
+﻿gci "G:\" -Recurse|?{!($_.psiscontainer)} | where {$_.LastWriteTime -gt (Get-Date).AddMinutes(-10)}|select lastwritetime, fullname, length
